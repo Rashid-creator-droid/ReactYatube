@@ -1,20 +1,13 @@
 import React from 'react';
+import PostItems from "./PostItems";
 
-const PostList = () => {
+const PostList = ({posts, title}) => {
     return (
         <div>
-            <article>
-                <ul>
-                    <li>Автор
-                        <a> все посты пользователя</a>
-                    </li>
-                    <li>Дата публикации</li>
-                </ul>
-                <p>Текст поста</p>
-                <a>Подробная информация</a><br/>
-                <a>Группа</a>
-            </article>
-            <hr/>
+            <h1>{title}</h1>
+                {posts.map(post =>
+                    <PostItems post={post} key={post.id}/>
+                )}
         </div>
     );
 };

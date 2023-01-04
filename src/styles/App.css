@@ -1,24 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#root {
+.page__wrapper {
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
-  padding-left: 40px;
 }
 
-.App {
-  width: 800px;
+.page {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
-.post {
-  display: flex;
-  padding: 15px;
-  border: 2px solid teal;
-  margin-top: 15px;
-  justify-content: space-between;
-  align-items: center;
+.page__current {
+  border: 2px solid blue;
+  font-weight: bold;
 }
