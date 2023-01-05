@@ -11,7 +11,7 @@ const PostItems = (props) => {
         <div>
             <article>
                 <ul>
-                    <li>Автор поста {props.post.author}
+                    <li>Автор поста{props.post.id} {props.post.author}
                         <a> все посты пользователя</a>
                     </li>
                     <li>Дата публикации: {date}</li>

@@ -9,3 +9,7 @@ export const getPagesArray = (totalPages) => {
     }
     return result;
 }
+
+export const getPages = (offset) => {
+    return (offset+10)
+}
