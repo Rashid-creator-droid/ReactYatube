@@ -9,11 +9,11 @@ import Pagination from "./  UI/Pagination";
 
 
 
-function MainPage() {
+const MainPage = () => {
     const [posts, setPosts] = useState([])
     const [totalPages, setTotalPages] = useState(0);
     const [limit, setLimit] = useState(10);
-    const [offset, setOffset] = useState(0);
+    const [offset, setOffset] = useState(1);
 
     const [fetchPosts] = useFetching(async () => {
         const response = await PostService.getAll(limit, offset);
@@ -23,7 +23,7 @@ function MainPage() {
         console.log(totalCount)
         setTotalPages(getPageCount(totalCount, limit))
         console.log(setTotalPages)
-        })
+    })
     let pagesArray = getPagesArray(totalPages);
     useEffect(() => {
         fetchPosts()
@@ -31,19 +31,19 @@ function MainPage() {
 
 
     const changePage = (offset) => {
-        setOffset(getPages(offset))
+        setOffset(offset)
     }
     return (
         <div>
-            <PostList posts={posts} title={'Список постов 1'}/>
+            <PostList posts={posts} title={'Последние обновления на сайте!'}/>
             <div className="page__wrapper">
                 {pagesArray.map(p =>
-                    <span className={offset === p-1 ? "page page__current" : "page"} onClick={() => changePage(p)} key={p}>{p}</span>
+                    <span className={offset === p ? "page page__current" : "page"} onClick={() => changePage(p)} key={p}>{p}</span>
                 )}
             </div>
         </div>
     );
- };
+};
 
 
 export default MainPage;

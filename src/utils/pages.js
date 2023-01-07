@@ -10,6 +10,6 @@ export const getPagesArray = (totalPages) => {
     return result;
 }
 
-export const getPages = (offset) => {
-    return (offset+10)
+export const getPagesOffset = (offset) => {
+    return offset === 1 ? 0 : offset*10-10
 }

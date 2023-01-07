@@ -1,18 +1,20 @@
 import React from 'react';
 import logo from "../images/logo.png";
 import ButtonHeader from "./  UI/ButtonHeader";
+import {NavLink} from "react-router-dom";
+import MainPage from "./MainPage";
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-light" style={{backgroundColor: "lightskyblue"}}>
+        <header className="navbar navbar-light" style={{backgroundColor: "lightskyblue"}}>
             <div className="container">
-                <a className="navbar-brand" href="">
+                <NavLink className="navbar-brand" to="/" onClick={MainPage}>
                     <img src={logo} style={{width: 30, height: 30}}  className="d-inline-block align-top" alt=""/>
                         <span style={{color: "red"}}>Ya</span>tube
-                </a>
+                </NavLink>
                 <ul className="nav  nav-pills">
-                    <ButtonHeader text={"Об авторе"} to={"/about"}/>
-                    <ButtonHeader text={"Технологии"}/>
+                    <ButtonHeader text={"Об авторе"} to="/about"/>
+                    <ButtonHeader text={"Технологии"} to="/technologies"/>
                     <ButtonHeader text={"Создать пост"}/>
                     <ButtonHeader text={"Список групп"}/>
                     <li>
@@ -22,7 +24,7 @@ const Header = () => {
                     <ButtonHeader text={"Выйти"}/>
                 </ul>
             </div>
-        </nav>
+        </header>
 
     );
 };
