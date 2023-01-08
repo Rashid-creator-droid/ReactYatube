@@ -21,12 +21,12 @@ const Header = () => {
                 <ul className="nav  nav-pills">
                     <ButtonHeader text='Об авторе' to="/about" />
                     <ButtonHeader text='Технологии' to="/technologies"/>
-                    <ButtonHeader text='Создать пост'/>
+                    <ButtonHeader text='Создать пост' to='/addpost'/>
                     <ButtonHeader text='Список групп'/>
                     <li>
                         Пользователь: leo
                     </li>
-                    <ButtonHeader text={"Войти"} to="/signin"/>
+                    <ButtonHeader text={"Войти"} to="/login"/>
                     <ButtonHeader text={"Выйти"}/>
                 </ul>
             </div>

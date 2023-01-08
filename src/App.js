@@ -8,14 +8,12 @@ import PostDetail from "./components/PostDetail";
 import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
-import SignIn from "./components/SignIn";
+import {SignIn} from "./components/sign-in/sign-in";
 
 
 
 
 function App() {
-    const [queryPage, setQueryPage] = React.useState(1);
-
 
     return (
         <div>
@@ -26,7 +24,7 @@ function App() {
                     <Route path="/post_detail" element={<PostDetail />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/technologies" element={<Technologies />} />
-                    <Route path="/signin" element={<SignIn />}/>
+                    <Route path="/login" element={<SignIn/>}/>
                 </Routes>
                 <Footer/>
             </Router>
