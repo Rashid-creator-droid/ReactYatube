@@ -21,7 +21,7 @@ const PostItems = (props) => {
                     <li>Дата публикации: {date}</li>
                 </ul>
                 <p>{props.post.text}</p>
-                 <Link to="/post_detail">Детали поста</Link>
+                 <Link to="/post_detail">Детали поста</Link><br/>
                 {isgroup != null &&
                 <a>#{props.post.group}</a>
                 }
